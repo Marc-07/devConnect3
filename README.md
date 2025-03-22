@@ -6,11 +6,11 @@
 
 ### 📌Características Actuales
 
-✅ Registro de usuarios con almacenamiento en MySQL.
-✅ Inicio de sesión con validación de credenciales.
-✅ Manejo de sesiones con HttpSession.
-✅ Redirección dinámica a diferentes páginas según el resultado del login.
-✅ Mensajes de error personalizados en caso de credenciales incorrectas.
+- Registro de usuarios con almacenamiento en MySQL.
+- Inicio de sesión con validación de credenciales.
+- Manejo de sesiones con HttpSession.
+- Redirección dinámica a diferentes páginas según el resultado del login.
+- Mensajes de error personalizados en caso de credenciales incorrectas.
 
 ---
 
