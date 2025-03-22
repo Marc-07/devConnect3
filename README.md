@@ -4,7 +4,7 @@
 
 ---
 
-###📌 Características Actuales
+##📌Características Actuales
 
 ✅ Registro de usuarios con almacenamiento en MySQL.
 ✅ Inicio de sesión con validación de credenciales.
