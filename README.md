@@ -4,7 +4,7 @@
 
 ---
 
-##📌Características Actuales
+### 📌Características Actuales
 
 ✅ Registro de usuarios con almacenamiento en MySQL.
 ✅ Inicio de sesión con validación de credenciales.
@@ -14,7 +14,7 @@
 
 ---
 
-###🛠️ Tecnologías Utilizadas
+### 🛠️ Tecnologías Utilizadas
 
 🖥️ Backend: Java EE, Servlets, JDBC
 💾 Base de datos: MySQL
@@ -23,13 +23,13 @@
 
 ---
 
-###🧪 Pruebas
+### 🧪 Pruebas
 ✔️ Usuario registrado → Puede iniciar sesión correctamente.
 ❌ Usuario inexistente → Mensaje de error en login.jsp.
 ⚠️ Usuario ya registrado → Mensaje de error en register.jsp.
 
 ---
 
-###📜 Licencia
+### 📜 Licencia
 MIT © 2025 - Desarrollado por 
-#####María Ramos - Aprendiz de ADSO - SENA
+##### María Ramos - Aprendiz de ADSO - SENA
