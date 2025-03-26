@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Configuración de la base de datos -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/devconnect</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">M@r14iC4rl05</property>
+
+        <!-- Configuración del dialecto -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Pool de conexiones -->
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.timeout">300</property>
+
+        <!-- Mostrar SQL -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Política de creación de tablas -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <!-- Mapeo de entidades -->
+        <mapping class="com.devconnect.model.Usuario"/>
+        <mapping class="com.devconnect.model.Vacante"/>
+    </session-factory>
+</hibernate-configuration>
+
+

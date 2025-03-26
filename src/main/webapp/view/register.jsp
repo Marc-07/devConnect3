@@ -45,7 +45,6 @@
             </form>
             <p>¿Ya tienes una cuenta? <a href="login.jsp">Inicia sesión</a></p>
           </div>
-
         </div>
     </body>
 </html>

@@ -20,10 +20,7 @@
             <nav class="navbar">
                 <div class="logo">DevConnect</div>
                 <ul class="nav-links">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Ofertas de Empleo</a></li>
-                    <li><a href="#">Empresas</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="${pageContext.request.contextPath}/view/sobreNosotros.jsp">Sobre Nosotros</a></li>
                     <li class="auth"><a href="login.jsp">Iniciar Sesión</a></li>
                     <li class="auth"><a href="register.jsp">Registrarse</a></li>
                 </ul>

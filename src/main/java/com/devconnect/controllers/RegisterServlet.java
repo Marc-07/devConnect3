@@ -1,52 +1,47 @@
 package com.devconnect.controllers;
 
-import com.devconnect.database.DBConnection;
+import com.devconnect.dao.UsuarioDAO;
+import com.devconnect.model.Usuario;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
 @WebServlet("/register")
 public class RegisterServlet extends HttpServlet {
+    private final UsuarioDAO usuarioDAO = new UsuarioDAO();
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        // Obtener parámetros del formulario
         String nombre = request.getParameter("nombre");
         String apellido = request.getParameter("apellido");
         String correo = request.getParameter("correo");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        try (Connection conn = DBConnection.getConnection()) {
-            String sql = "INSERT INTO usuarios (nombre, apellido, correo, username, password) VALUES (?, ?, ?, ?, ?)";
-            PreparedStatement stmt = conn.prepareStatement(sql);
-            stmt.setString(1, nombre);
-            stmt.setString(2, apellido);
-            stmt.setString(3, correo);
-            stmt.setString(4, username);
-            stmt.setString(5, password);
+        // Crear objeto Usuario
+        Usuario usuario = new Usuario(nombre, apellido, correo, username, password);
 
-            int rowsInserted = stmt.executeUpdate();
-            if (rowsInserted > 0) {
-                response.sendRedirect("view/success.jsp"); // Redirige a la página de éxito
-            } else {
-                response.sendRedirect("view/register.jsp?error=true");
-            }
-        } catch (SQLException e) {
+        try {
+            // Registrar usuario
+            usuarioDAO.registrarUsuario(usuario);
+            response.sendRedirect("view/success.jsp");
+        } catch (Exception e) {
             e.printStackTrace();
-            response.sendRedirect("view/register.jsp?error=true");
+            request.setAttribute("error", "Error al registrar: " + e.getMessage());
+            request.getRequestDispatcher("view/register.jsp").forward(request, response);
         }
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         request.getRequestDispatcher("view/register.jsp").forward(request, response);
     }
 }
+
 

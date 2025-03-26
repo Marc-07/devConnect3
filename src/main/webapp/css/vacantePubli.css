@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #F5F5F5; /* Gris claro */
+    color: #333333; /* Negro suave */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Contenedor principal */
+.vacante-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Encabezado */
+.vacante-header {
+    margin-bottom: 20px;
+}
+
+.vacante-title {
+    font-size: 28px;
+    color: #2D433C; /* Verde oscuro */
+    font-weight: 600;
+}
+
+/* Secciones de la vacante */
+.vacante-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #FAFAFA;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.vacante-section h2, .vacante-section h3 {
+    color: #2D433C; /* Verde oscuro */
+    margin-bottom: 10px;
+}
+
+.vacante-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 16px;
+}
+
+/* Botón */
+.btn-vacantePublicada {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #2D433C; /* Verde oscuro */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-vacantePublicada:hover {
+    background-color: #3F5C50; /* Verde más claro */
+    transform: scale(1.05);
+}
+
+.btn-vacantePublicada:active {
+    background-color: #1E302C; /* Verde aún más oscuro */
+    transform: scale(0.98);
+}

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #F5F5F5; /* Gris claro */
+    color: #333333; /* Negro suave */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #2D433C; /* Verde oscuro */
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #3F5C50; /* Verde más claro */
+    border-radius: 5px;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.about-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #2D433C; /* Verde oscuro */
+    margin-bottom: 15px;
+}
+
+.about-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about-mission {
+    margin-top: 30px;
+    padding: 40px;
+    background-color: #F5F5F5; /* Gris claro */
+    border-left: 5px solid #2D433C; /* Detalle de borde */
+    text-align: left;
+}
+
+.about-mission h2 {
+    font-size: 24px;
+    color: #2D433C;
+    margin-bottom: 10px;
+}
+
+.about-values {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.about-values li {
+    background-color: #E0E0E0; /* Gris más oscuro */
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+}
+ h2.titulo {
+     padding-bottom: 2rem;
+ }
+
+h2.titulo2 {
+    padding-top: 2rem;
+}
