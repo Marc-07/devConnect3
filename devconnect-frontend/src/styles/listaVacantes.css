@@ -1,0 +1,82 @@
+.lista-vacantes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+.vacantes-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.vacantes-table th, .vacantes-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.vacantes-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.vacantes-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.vacantes-table tr:hover {
+    background-color: #e9ecef;
+}
+
+.acciones {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-editar, .btn-eliminar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.btn-editar:hover {
+    color: #28a745;
+}
+
+.btn-eliminar:hover {
+    color: #dc3545;
+}

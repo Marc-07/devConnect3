@@ -3,7 +3,9 @@ package com.devconnect.model;
 import jakarta.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Entity
 @Table(name = "vacantes")
 public class Vacante implements Serializable {
@@ -32,9 +34,9 @@ public class Vacante implements Serializable {
     @Column(length = 1000)
     private String descripcion;
 
+    // Relación muchos a uno con Usuario
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "usuario_id", nullable = false,
-            foreignKey = @ForeignKey(name = "fk_vacante_usuario"))
+    @JoinColumn(name = "usuario_id", nullable = false, foreignKey = @ForeignKey(name = "fk_vacante_usuario"))
     private Usuario usuario;
 
     // Constructores
@@ -68,7 +70,7 @@ public class Vacante implements Serializable {
     }
 
     public void setTitulo(String titulo) {
-        if(titulo == null || titulo.trim().isEmpty()) {
+        if (titulo == null || titulo.trim().isEmpty()) {
             throw new IllegalArgumentException("El título no puede estar vacío");
         }
         this.titulo = titulo.trim();
@@ -79,7 +81,7 @@ public class Vacante implements Serializable {
     }
 
     public void setEmpresa(String empresa) {
-        if(empresa == null || empresa.trim().isEmpty()) {
+        if (empresa == null || empresa.trim().isEmpty()) {
             throw new IllegalArgumentException("La empresa no puede estar vacía");
         }
         this.empresa = empresa.trim();
@@ -90,7 +92,7 @@ public class Vacante implements Serializable {
     }
 
     public void setUbicacion(String ubicacion) {
-        if(ubicacion == null || ubicacion.trim().isEmpty()) {
+        if (ubicacion == null || ubicacion.trim().isEmpty()) {
             throw new IllegalArgumentException("La ubicación no puede estar vacía");
         }
         this.ubicacion = ubicacion.trim();
@@ -101,7 +103,7 @@ public class Vacante implements Serializable {
     }
 
     public void setSalario(double salario) {
-        if(salario <= 0) {
+        if (salario <= 0) {
             throw new IllegalArgumentException("El salario debe ser mayor que cero");
         }
         this.salario = salario;
@@ -112,7 +114,7 @@ public class Vacante implements Serializable {
     }
 
     public void setContrato(String contrato) {
-        if(contrato == null || contrato.trim().isEmpty()) {
+        if (contrato == null || contrato.trim().isEmpty()) {
             throw new IllegalArgumentException("El tipo de contrato no puede estar vacío");
         }
         this.contrato = contrato.trim();
@@ -131,13 +133,13 @@ public class Vacante implements Serializable {
     }
 
     public void setUsuario(Usuario usuario) {
-        if(usuario == null) {
+        if (usuario == null) {
             throw new IllegalArgumentException("La vacante debe tener un usuario asociado");
         }
         this.usuario = usuario;
     }
 
-    // equals y hashCode
+    // equals y hashCode para asegurar la comparación de objetos y evitar errores con colecciones
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -156,7 +158,7 @@ public class Vacante implements Serializable {
         return Objects.hash(id, titulo, empresa, ubicacion, salario, contrato);
     }
 
-    // toString mejorado
+    // toString mejorado para una presentación más legible
     @Override
     public String toString() {
         return "Vacante{" +

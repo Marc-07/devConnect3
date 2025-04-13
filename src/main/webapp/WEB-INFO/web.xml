@@ -41,5 +41,15 @@
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ListaVacantesServlet</servlet-name>
+        <servlet-class>com.devconnect.controllers.ListaVacantesServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ListaVacantesServlet</servlet-name>
+        <url-pattern>/listaVacantes</url-pattern>
+    </servlet-mapping>
 </web-app>
 

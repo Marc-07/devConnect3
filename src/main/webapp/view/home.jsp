@@ -12,7 +12,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>DevConnect | Home</title>
-        <link rel="stylesheet" type="text/css" href="../css/home.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/home.css">
     </head>
     <body>
 
@@ -22,7 +22,7 @@
                 <ul class="nav-links">
                     <li><a href="${pageContext.request.contextPath}/view/sobreNosotros.jsp">Sobre Nosotros</a></li>
                     <li class="auth"><a href="login.jsp">Iniciar Sesión</a></li>
-                    <li class="auth"><a href="register.jsp">Registrarse</a></li>
+                    <li class="auth"><a href="http://localhost:3000/register">Registrarse</a></li>
                 </ul>
             </nav>
         </header>
@@ -30,7 +30,7 @@
         <main class="hero">
             <h1>Encuentra el trabajo ideal para ti</h1>
             <p>Explora miles de oportunidades laborales en tecnología y conecta con empresas innovadoras.</p>
-            <a href="register.jsp" class="btn">Regístrate ahora</a>
+            <a href="http://localhost:3000/register" class="btn">Regístrate ahora</a>
         </main>
     </body>
 </html>
