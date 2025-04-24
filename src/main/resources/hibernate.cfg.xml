@@ -26,7 +26,6 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
         <!-- Mapeo de entidades -->
         <mapping class="com.devconnect.model.Usuario"/>
-        <mapping class="com.devconnect.model.Vacante"/>
     </session-factory>
 </hibernate-configuration>
 

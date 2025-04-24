@@ -65,5 +65,7 @@ public class RegisterServlet extends HttpServlet {
         resp.setHeader("Access-Control-Allow-Headers", "Content-Type");
         resp.setStatus(HttpServletResponse.SC_OK);
     }
+
+
 }
 
